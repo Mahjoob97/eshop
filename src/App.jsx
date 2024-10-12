@@ -6,6 +6,7 @@ import Category2 from "./components/Category2";
 import Service from "./components/Service";
 import Banner from "./components/Banner";
 import headphone from "./assets/headphone.png";
+import Products from "./components/Products";
 
 const bannerData = {
   discount: "30% off",
@@ -28,6 +29,7 @@ const App = () => {
       <Category2 />
       <Service />
       <Banner data={bannerData} />
+      <Products />
     </div>
   );
 };
