@@ -23,7 +23,7 @@ const Banner = ({ data }) => {
             <img
               src={data.image}
               alt=""
-              className="scale-120 w-[220px] md:w-[340px] mx-auto drop-shadow-2xl object-cover"
+              className="scale-125 w-[220px] md:w-[340px] mx-auto drop-shadow-2xl object-cover"
             />
           </div>
           {/* third col */}
