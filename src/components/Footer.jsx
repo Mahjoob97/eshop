@@ -4,10 +4,9 @@ import {
   FaInstagram,
   FaLocationArrow,
   FaMobileAlt,
-  FaTwitter,
+  FaX,
   FaYoutube,
 } from "react-icons/fa";
-import { FaX } from "react-icons/fa6";
 
 const footerLinks = [
   {
