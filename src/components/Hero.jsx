@@ -5,7 +5,7 @@ import Image2 from "../assets/category/vr.png";
 import Image3 from "../assets/category/macbook.png";
 import Button from "./Button";
 
-const Hero = () => {
+const Hero = ({ handlePopup }) => {
   const heroData = [
     {
       id: 1,
@@ -73,6 +73,7 @@ const Hero = () => {
                         text="Shop By Category"
                         bgColor="bg-primary"
                         textColor="text-white"
+                        handler={handlePopup}
                       />
                     </div>
                   </div>

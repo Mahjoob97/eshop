@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Category from "./components/Category";
@@ -11,6 +11,7 @@ import smartwatch2 from "./assets/category/smartwatch2-removebg-preview.png";
 import Blogs from "./components/Blogs";
 import Partners from "./components/Partners";
 import Footer from "./components/Footer";
+import Popup from "./components/Popup";
 
 const bannerData = {
   discount: "30% OFF",
@@ -36,10 +37,16 @@ const bannerData2 = {
 };
 
 const App = () => {
+  const [orderPopup, setOrderPopup] = useState(false);
+
+  const handlePopup = () => {
+    setOrderPopup(!orderPopup);
+  };
+
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden">
-      <Navbar />
-      <Hero />
+      <Navbar handlePopup={handlePopup} />
+      <Hero handlePopup={handlePopup} />
       <Category />
       <Category2 />
       <Service />
@@ -49,6 +56,7 @@ const App = () => {
       <Blogs />
       <Partners />
       <Footer />
+      <Popup orderPopup={orderPopup} handlePopup={handlePopup} />
     </div>
   );
 };
