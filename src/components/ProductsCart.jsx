@@ -8,7 +8,12 @@ const ProductsCart = ({ data }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 place-items-center">
         {/* card section */}
         {data.map((data) => (
-          <div className="group" key={data.id}>
+          <div
+            data-aos="zoom-in"
+            data-aos-delay={data.aosDelay}
+            className="group"
+            key={data.id}
+          >
             <div className="relative space-y-3">
               <img
                 src={data.image}

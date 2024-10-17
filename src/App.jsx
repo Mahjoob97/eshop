@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Category from "./components/Category";
@@ -12,6 +12,8 @@ import Blogs from "./components/Blogs";
 import Partners from "./components/Partners";
 import Footer from "./components/Footer";
 import Popup from "./components/Popup";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const bannerData = {
   discount: "30% OFF",
@@ -42,6 +44,16 @@ const App = () => {
   const handlePopup = () => {
     setOrderPopup(!orderPopup);
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 110,
+      offset: 100,
+    });
+    AOS.refresh;
+  }, []);
 
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden">
